@@ -15,6 +15,11 @@
 }
 
 body {
+  margin: auto;
+
+  width: 100%;
+  max-width: 600px;
+
   font-family:
     system-ui,
     -apple-system,
@@ -66,6 +71,25 @@ body.dark {
     padding: .8rem;
 
     border: 2px solid currentColor;
+
+    color: currentColor;
+    background: transparent;
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  button {
+    cursor: pointer;
+
+    padding: 1rem;
+
+    font-size: 50px;
+
+    border: 3px solid currentColor;
 
     color: currentColor;
     background: transparent;
