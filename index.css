@@ -68,9 +68,10 @@ body.dark {
   .themeToogle {
     cursor: pointer;
 
-    padding: .8rem;
+    padding: 1rem;
 
     border: 2px solid currentColor;
+    border-radius: 100%;
 
     color: currentColor;
     background: transparent;
@@ -93,5 +94,28 @@ body.dark {
 
     color: currentColor;
     background: transparent;
+  }
+}
+
+.game {
+  margin-top: 1.5rem;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+  strong {
+    margin: auto;
+    padding: .4rem;
+
+    width: 100%;
+    max-width: 300px;
+    
+    border-radius: 8px;
+
+    color: white;
+    background: #0066ff;
   }
 }
