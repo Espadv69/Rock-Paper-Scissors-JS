@@ -33,9 +33,9 @@ function play(playerChoice) {
     '.game'
   ).innerHTML = `<strong>Player: ${playerChoice}</strong> <strong>Computer: ${computerChoice}</strong>`
   document.querySelector('.result').innerHTML = `
-    <p>${result}</p>
-    <strong>You've won: ${counterWins} times</strong>
-    <strong>You've lost: ${counterLosses} times</strong>
-    <strong>Ties: ${counterTies}</strong>
+    <p style="font-size: 30px;">${result}</p>
+    <strong style="color: green;">You've won: ${counterWins} times</strong>
+    <strong style="color: red;">You've lost: ${counterLosses} times</strong>
+    <strong style="color: orange;">Ties: ${counterTies}</strong>
   `
 }
