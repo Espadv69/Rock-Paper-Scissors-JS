@@ -85,11 +85,11 @@ body.dark {
   button {
     cursor: pointer;
 
-    padding: 1rem;
-
+    padding: 2rem;
     font-size: 50px;
 
     border: 3px solid currentColor;
+    border-radius: 10px;
 
     color: currentColor;
     background: transparent;
