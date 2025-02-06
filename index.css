@@ -30,6 +30,7 @@ body {
 
   height: 100dvh;
   overflow: hidden;
+  transition: color .3s, background .3s;
 }
 
 body.light {
