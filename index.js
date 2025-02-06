@@ -5,6 +5,8 @@ $themeToogleBtn.addEventListener('click', () => {
   document.body.className = isDarkMode ? 'dark' : 'light'
 })
 
+let counterWins = 0
+let counterLosses = 0
 function play(playerChoice) {
   const choices = ["rock", "paper", "scissors"]
   const computerChoice = choices[Math.floor(Math.random() * choices.length)]
@@ -19,9 +21,10 @@ function play(playerChoice) {
     (playerChoice === 'scissors' && computerChoice === 'paper')
   ) {
     result = `You win! 🎉 ${playerChoice} beats ${computerChoice}`
+    counterWins++
   } else {
     result = `You lose! 😢 ${computerChoice} beats ${playerChoice}`
   }
   document.querySelector('.game').innerHTML = `<strong>Player: ${playerChoice}</strong> <strong>Computer: ${computerChoice}</strong>`
-  document.querySelector('.result').textContent = result
+  document.querySelector('.result').innerHTML = `<p>${result}</p> <strong>You've won: ${counterWins} times</strong>`
 }
