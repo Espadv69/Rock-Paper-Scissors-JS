@@ -42,3 +42,32 @@ body.dark {
   color: var(--color-dark);
   background: var(--bg-dark);
 }
+
+.header {
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  h1 {
+    width: 100%;
+    max-width: 400px;
+
+    text-align: center;
+
+    border-bottom: 2px solid currentColor
+  }
+
+  .themeToogle {
+    cursor: pointer;
+
+    padding: .8rem;
+
+    border: 2px solid currentColor;
+
+    color: currentColor;
+    background: transparent;
+  }
+}
