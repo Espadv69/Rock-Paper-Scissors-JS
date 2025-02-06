@@ -1,3 +1,10 @@
+const $themeToogleBtn = document.querySelector('.themeToogle')
+let isDarkMode = false
+$themeToogleBtn.addEventListener('click', () => {
+  isDarkMode = !isDarkMode
+  document.body.className = isDarkMode ? 'dark' : 'light'
+})
+
 function play(playerChoice) {
   const choices = ["rock", "paper", "scissors"]
   const computerChoice = choices[Math.floor(Math.random() * choices.length)]
