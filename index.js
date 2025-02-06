@@ -8,13 +8,13 @@ $themeToogleBtn.addEventListener('click', () => {
 let counterWins = 0
 let counterLosses = 0
 function play(playerChoice) {
-  const choices = ["rock", "paper", "scissors"]
+  const choices = ['rock', 'paper', 'scissors']
   const computerChoice = choices[Math.floor(Math.random() * choices.length)]
 
   let result = ''
 
   if (playerChoice === computerChoice) {
-    result = 'It\'s a tie! 🤝'
+    result = "It's a tie! 🤝"
   } else if (
     (playerChoice === 'rock' && computerChoice === 'scissors') ||
     (playerChoice === 'paper' && computerChoice === 'rock') ||
@@ -24,7 +24,12 @@ function play(playerChoice) {
     counterWins++
   } else {
     result = `You lose! 😢 ${computerChoice} beats ${playerChoice}`
+    counterLosses++
   }
-  document.querySelector('.game').innerHTML = `<strong>Player: ${playerChoice}</strong> <strong>Computer: ${computerChoice}</strong>`
-  document.querySelector('.result').innerHTML = `<p>${result}</p> <strong>You've won: ${counterWins} times</strong>`
+  document.querySelector(
+    '.game'
+  ).innerHTML = `<strong>Player: ${playerChoice}</strong> <strong>Computer: ${computerChoice}</strong>`
+  document.querySelector(
+    '.result'
+  ).innerHTML = `<p>${result}</p> <strong>You've won: ${counterWins} times</strong> <strong>You've lost: ${counterLosses} times</strong>`
 }
