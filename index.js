@@ -3,4 +3,18 @@ function play(playerChoice) {
   const computerChoice = choices[Math.floor(Math.random() * choices.length)]
 
   let result = ''
+
+  if (playerChoice === computerChoice) {
+    result = 'It\'s a tie! 🤝'
+  } else if (
+    (playerChoice === 'rock' && computerChoice === 'scissors') ||
+    (playerChoice === 'paper' && computerChoice === 'rock') ||
+    (playerChoice === 'scissors' && computerChoice === 'paper')
+  ) {
+    result = `You win! 🎉 ${playerChoice} beats ${computerChoice}`
+  } else {
+    result = `You lose! 😢 ${computerChoice} beats ${playerChoice}`
+  }
+
+  document.querySelector('.result').textContent = result
 }
