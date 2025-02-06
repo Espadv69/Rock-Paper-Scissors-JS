@@ -15,6 +15,6 @@ function play(playerChoice) {
   } else {
     result = `You lose! 😢 ${computerChoice} beats ${playerChoice}`
   }
-
+  document.querySelector('.game').innerHTML = `<strong>Player: ${playerChoice}</strong> <strong>Computer: ${computerChoice}</strong>`
   document.querySelector('.result').textContent = result
 }
